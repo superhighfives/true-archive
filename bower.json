@@ -1,0 +1,12 @@
+{
+  "name": "src",
+  "private": true,
+  "dependencies": {
+    "sass-bootstrap": "~3.0.0",
+    "modernizr": "~2.8",
+    "jquery": "~1.10.2",
+    "snap.svg": "~0.2.0",
+    "angular": "~1.2.16"
+  },
+  "devDependencies": {}
+}

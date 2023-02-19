@@ -1,0 +1,32 @@
+.footer
+  opacity: 0
+  animation: fade-in 3s forwards 5s
+  position: fixed
+  bottom: 0
+  left: 0
+  .ended &
+    opacity: 0
+  .footer-wrapper
+    padding: 10px
+    transition: opacity 0.3s
+    opacity: 0.5
+    &:hover
+      opacity: 1
+  .buy-link
+    float: left
+    margin-bottom: 10px
+    text-decoration: none
+    transition: opacity 0.3s
+    .buy-link-title
+      +type(24)
+      color: $color-white
+    .buy-link-subtitle
+      +type(18)
+      .icon
+        font-size: 0.75em
+    &:hover
+      opacity: 1
+    .heading-title
+      color: $color-white
+  .social-links
+    clear: left

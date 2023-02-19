@@ -1,0 +1,61 @@
+.button-group
+  border-top: 1px solid rgba($color-white, 0.25)
+  margin-top: 20px
+  padding-top: 20px
+
+.button
+  text-align: left
+  transition: color 0.3s, border-color 0.3s
+  display: inline-block
+  padding: 5px 10px
+  margin: 2px 0
+  text-decoration: none
+  color: $color-white
+  background-color: transparent
+  border: 1px solid $color-white
+  &:hover
+    text-decoration: none
+    color: $color-yellow
+    border-color: $color-yellow
+  &.button-wide
+    display: block
+    text-align: center
+  &.button-simple
+    border: none
+    .icon,
+    .social-icon
+      transition: color 0.3s
+      color: $color-subtle-grey
+    &:hover
+      color: $color-white
+      .icon,
+      .social-icon
+        color: $color-white
+  .icon,
+  .social-icon
+    margin-right: 5px
+    font-size: 0.9125em
+
+.loader
+  transition: color 0.3s, background-color 0.3s
+  min-width: 20px
+  min-height: 20px
+  background-size: 20px
+  color: $color-black
+  @extend %type-heading
+  margin: 0 auto
+  padding: 5px 10px
+  cursor: default
+  &.loading
+    background-image: url(../images/svg/loading.svg)
+    background-repeat: no-repeat
+    background-position: center
+  &.loaded
+    background-image: none
+  &.ready
+    border: 1px solid $color-white
+    background-color: $color-white
+    cursor: pointer
+    &:hover
+      color: $color-white
+      background-color: transparent

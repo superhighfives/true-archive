@@ -1,0 +1,100 @@
+body
+  background: $color-black
+  color: $base-text-color
+  @extend %type-body
+  min-width: 320px
+
+%content-block
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+  display: none !important
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  margin: 0
+  padding: 0
+  @extend %type-heading
+
+ul, ol
+  margin-bottom: 20px
+
+p
+  +type(18)
+  +line-height(24)
+  margin: 0 0 20px 0
+  &.last
+    margin-bottom: 0
+  &:empty
+    display: none
+
+blockquote
+  background: darken($color-light-grey, 2%)
+  border-left-color: $color-light-grey
+  color: $color-subtle-grey
+  p
+    @extend %type-regular
+    &:last-child
+      margin-bottom: 0
+
+.link
+  transition: border-bottom 0.3s
+  &:hover
+    text-decoration: none
+    border-bottom: 1px solid $color-yellow
+
+.fancy
+  @extend %type-fancy
+  @extend %type-downcase
+
+.highlight
+  color: $color-yellow
+
+.nobr
+  white-space: nowrap
+
+.table-display
+  height: 100%
+  width: 100%
+  display: table
+
+.cell-display
+  display: table-cell
+  &.cell-vertical-center
+    vertical-align: middle
+  &.cell-vertical-bottom
+    vertical-align: bottom
+
+.flex-video
+  position: relative
+  padding-top: 25px
+  padding-bottom: 67.5%
+  height: 0
+  margin-bottom: 16px
+  overflow: hidden
+  &.widescreen
+    padding-bottom: 57.25%
+  &.vimeo
+    padding-top: 0
+  iframe, object, embed
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)
+  .flex-video
+    padding-top: 0
+
+// hide flash of unstyled text
+html
+  body
+    opacity: 1
+  &.wf-loading
+    body
+      opacity: 0
