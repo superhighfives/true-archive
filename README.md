@@ -4,6 +4,8 @@
 
 The microsite for the music video "True", by Brightly.
 
+> 🚨 **Note:** It's been a long time since this project was built, and the underlying technologies have changed. A lot. With the goal of keeping the spirit of this project alive, I've created a modern version, mostly by patching and noodling my way through already minified code. As a result, [True](https://true.wearebrightly.com/) works on modern devices, like mobile, but this repo is no longer reflective of the underlying code. You can find the Frankenstein's monster [that is currently deployed here](https://github.com/superhighfives/true).
+
 ---
 
 ## Getting started
